@@ -11,15 +11,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
-@Builder(access = AccessLevel.PUBLIC)
+@Builder(access = AccessLevel.PUBLIC, toBuilder = true)
 public class Bouquet implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    String nameBouquet;
+    private String nameBouquet;
 
     @NonNull
-    int id;
+    private int id;
 
-    List<Flowers> flowersList;
-    List<Accessories> accessoriesList;
+    private List<Flowers> flowersList;
+    private List<Accessories> accessoriesList;
 }

@@ -67,6 +67,10 @@ public final class DataBase implements Serializable,AutoCloseable {
         return BOUQUETS.get(id).getAccessoriesList();
 
     }
+    public void clearDb() {
+        BOUQUETS = new HashMap<>();
+        currentId = 0;
+    }
 
     @Override
     public void close() throws Exception {
